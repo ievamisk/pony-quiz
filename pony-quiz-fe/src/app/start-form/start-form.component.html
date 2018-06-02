@@ -1,0 +1,16 @@
+<div class="start">
+  <h1 class="start-title">Let's find out which pony are you!</h1>
+  <img src="https://pre00.deviantart.net/f438/th/pre/i/2011/348/2/0/the_elements_of_harmony_by_ryoki_fureaokibi-d4j50lt.png">
+  <form class="start-form" [formGroup]="nameForm">
+    <input class="start-form-input"
+           type="text"
+           id="name"
+           formControlName="name"
+           [(ngModel)] = "name"
+           placeholder="Enter your name">
+    <button [disabled]="nameForm.get('name').invalid"
+            routerLink="questions/1"
+            class="start-form-button"
+            (click)="save()">Start</button>
+  </form>
+</div>

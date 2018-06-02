@@ -1,0 +1,11 @@
+title: All ponies 20180329 223849
+given:
+  - time: 2018-03-29T22:38:49.887+03:00
+wts:
+  - when: |
+       GET ponies
+       Cookie: RestxSession-MyLittlePony={"principal":"admin","sessionKey":"8dccae81-52c3-444e-bd62-26abc5be785b","_expires":"2018-04-28T22:38:49.887+03:00"}; RestxSessionSignature-MyLittlePony=2fwotB05Eib4bLoMGcFCAWnJ/OI=
+    then: |
+       400
+
+        [ ]

@@ -1,0 +1,61 @@
+@import '../../assets/colors.less';
+
+.finish {
+    display: flex;
+    flex-direction: row;
+    &-image {
+        width: 50%;
+        img {
+            margin: auto;
+            height: 350px;
+            width: auto;
+        }
+    }
+
+    &-result {
+        width: 50%;
+        margin-left: 20px;
+        position: relative;
+        color: @gray;
+        height: 410px;
+
+        > h1 {
+            margin-bottom: 10px;
+        }
+
+        &-name {
+            color: @purple;
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        &-description {
+            color: @gray;
+            max-height: 230px;
+            overflow-y: auto;
+        }
+    }
+}
+
+.restart-button {
+    background-color: @purple;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    outline: none;
+    transition: 0.2s ease-out;
+
+    &:hover {
+        background-color: @dark-purple;
+    }
+
+}

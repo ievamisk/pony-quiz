@@ -1,0 +1,30 @@
+@import '../assets/colors.less';
+
+#background {
+    background-color: #482b66;
+    height: 100%;
+    overflow: hidden;
+}
+
+#management-button, #quiz-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-transform: uppercase;
+    color: @white;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s ease-out;
+    background-color: @purple;
+    &:hover {
+        background-color: @white;
+        color: @purple;
+
+    }
+    &-notActive {
+        display: none;
+    }
+}

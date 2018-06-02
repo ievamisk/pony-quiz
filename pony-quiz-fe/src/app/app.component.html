@@ -1,0 +1,5 @@
+<div id="background"></div>
+<button [hidden]="isOn" (click)="toggle()" id="management-button" routerLink="management">Management</button>
+<button [hidden]="!isOn" (click)="toggle()" id="quiz-button" routerLink="">Quiz</button>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,11 @@
+title: Labels.json 20180328 214511
+given:
+  - time: 2018-03-28T21:45:11.846+03:00
+wts:
+  - when: |
+       GET i18n/labels.json
+       Cookie: RestxSession-MyLittlePony={"principal":"xc","sessionKey":"056155c5-88f2-43b6-a451-526ffe183d51","_expires":"2018-04-27T21:45:11.846+03:00"}; RestxSessionSignature-MyLittlePony=JJeFqlfDsyBBRAIwdEJR5dJzz3I=
+    then: |
+       304
+
+        Not Modified

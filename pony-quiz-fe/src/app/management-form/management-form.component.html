@@ -1,0 +1,56 @@
+<form class="content-ponies" [ngClass]="(poniesIsActive) ? 'content-ponies--active' : ''" (submit)="onSubmit()">
+  <div class="content-form-wrapper" *ngIf="pony">
+    <div class="content-form-details">
+      <div class="content-form-details-image">
+        <h3 class="content-form-title">Image</h3>
+        <img [src]="(pony.image) ? sanitizedImage(pony.image) : sanitizedImage()">
+        <div class="input-group">
+            <input [(ngModel)]="pony.image"class="input-group-input" type="text" id="image" name="pony_image" placeholder="Image URL" required> 
+        </div>
+      </div>
+      <h3 class="content-form-title">Details</h3>
+      <div class="input-group">
+        <label for="name">Name:</label>
+        <input [(ngModel)]="pony.name"class="input-group-input" type="text" id="name" name="ponyName">
+      </div>
+      <div class="input-group">
+          <label for="description">Description:</label>
+          <textarea [(ngModel)]="pony.description"class="input-group-textarea" id="description" name="ponyDescription" required></textarea>
+      </div>
+      
+    </div>
+    <div class="content-form-questions">
+      <h3 class="content-form-title">Questions and answers</h3>
+        <div *ngFor="let question of pony.questions" class="input-group">
+          <label id="question-{{question._id}}" for="answer-{{question._id}}">{{question.question}}</label>
+          <input [(ngModel)]="question.answer.answer" class="input-group-input" type="text" id="answer-{{question._id}}" name="answer-{{question._id}}" required>
+        </div>
+    </div>
+  </div>
+</form>
+
+<form class="content-questions" [ngClass]="(questionsIsActive) ? 'content-questions--active' : ''">
+  <div class="content-form-wrapper" *ngIf="question">
+    <div class="content-form-details">
+      <h3 class="content-form-title">Image</h3>
+      <div class="content-form-details-image">
+        <img [src]="(question.image) ? sanitizedImage(question.image) : sanitizedImage()">
+        <div class="input-group">
+            <input [(ngModel)]="question.image" class="input-group-input" type="text" id="image" name="pony_image" placeholder="Image URL" required>
+        </div>
+      </div>
+    </div>
+    <div class="content-form-questions">
+      <h3 class="content-form-title">Question</h3>
+      <div class="input-group">
+        <input [(ngModel)]="question.question" class="input-group-input" type="text" id="question" name="question" required>
+      </div>
+      <h3 class="content-form-title">Answers</h3>
+      <div *ngFor="let pony of question.answerAndPony" class="input-group">
+        <label id="pony-{{pony.ponyId}}" for="pony-{{pony._id}}">{{pony.ponyName}}</label>
+        <input [(ngModel)]="pony.answer" class="input-group-input" type="text" id="pony-{{pony._id}}" name="answer-{{pony._id}}" required>
+      </div>
+    </div>
+  </div>
+</form>
+

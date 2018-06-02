@@ -1,0 +1,21 @@
+<ul *ngIf="ponies" class="management-list">
+  <li *ngFor="let pony of ponies" class="management-list-item">
+    <img class="management-list-item-image" [src]="(pony.image) ? sanitizedImage(pony.image) : sanitizedImage()">
+    <p class="management-list-item-title">{{ pony.name }}</p>
+    <div class="management-list-buttons">
+      <button class="edit-button" (click)="toggleButton()" routerLink="{{pony._id}}">edit</button>
+      <button class="delete-button" (click)="delete(pony._id)">delete</button>
+    </div>
+  </li>
+</ul>
+
+<ul *ngIf="questions" class="management-list">
+  <li *ngFor="let question of questions" class="management-list-item">
+    <img class="management-list-item-image" src="{{ question.image }}">
+    <p class="management-list-item-title">{{ question.question }}</p>
+    <div class="management-list-buttons">
+      <button class="edit-button" (click)="toggleButton()" routerLink="{{question._id}}">edit</button>
+      <button class="delete-button" (click)="delete(question._id)">delete</button>
+    </div>
+  </li>
+</ul>

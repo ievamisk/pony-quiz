@@ -1,0 +1,27 @@
+<div class="question" *ngIf="questions">
+  <div class="question-image">
+        <img [src]="(questions.image) ? sanitizedImage(questions.image) : sanitizedImage()">
+  </div>
+  <form class="question-form" [formGroup]="quizForm">
+    <h1 class="question-form-question">{{questions.question}}:</h1>
+    <p *ngFor="let item of questions.answerAndPony; let i = index">
+      <input class="radio-button"
+             type="radio"
+             name="answer"
+             formControlName="answer"
+             value={{item._id}}
+             id="answer{{i}}"
+             [checked]= false
+             (change)="onValueChange()">
+      <label for="answer{{i}}">{{item.answer}}</label>
+    </p>
+    <div class="buttons">
+      <button class="previous-button" (click)="back()">previous</button>
+      <button class="next-button"
+              (click)="next()">next</button>
+    </div>
+  </form>
+</div>
+
+
+

@@ -1,0 +1,82 @@
+@import '../../assets/colors.less';
+
+.management-card {
+    width: 800px;
+    box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.2);
+    margin: auto;
+    background-color: @white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    &-header {
+        padding: 20px;
+        text-align: center;
+        border-bottom: 2px solid @purple;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &-title {
+            margin: auto 0;
+            color: @purple;
+            text-transform: capitalize;
+        }
+
+        &-buttons {
+            width: 200px;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &-body {
+        justify-content: space-between;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 600px;
+        overflow-y: auto;
+    }
+}
+
+.add-button, .cancel-button, .save-button, .back-button {
+    text-transform: uppercase;
+    color: @white;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s ease-out;
+    display: none;
+
+    &--active {
+        display: block;
+    }
+}
+
+.add-button, .save-button { 
+    width: 50%;
+    background-color: @purple;
+    margin-right: 10px;
+    &:hover {
+        background-color: @dark-purple;
+    }
+
+    &--active {
+        display: block;
+    }
+}
+
+.cancel-button, .back-button {
+    background-color: @gray;
+    width: 50%;
+
+    &:hover {
+        background-color: @dark-gray;
+    }
+
+    &--active {
+        display: block;
+    }
+}

@@ -1,0 +1,16 @@
+<div class="management-card">
+    <div class="management-card-header">
+      <h1 class="management-card-header-title">{{ routeName }} management</h1>
+      <div class="management-card-header-buttons">
+        <button class="save-button" [ngClass]="(buttonsIsActive) ? 'save-button--active' : ''" (click)="save()">save</button>
+        <button class="cancel-button" [ngClass]="(buttonsIsActive) ? 'cancel-button--active' : ''" (click)="cancel()">cancel</button>
+        <button class="add-button" [ngClass]="(buttonsIsActive) ? '' : 'add-button--active' " routerLink="create">add new</button>
+        <button class="back-button" [ngClass]="(buttonsIsActive) ? '' : 'back-button--active' " (click)="back()" routerLink="create">back</button>
+
+      </div>
+    </div>
+    <div class="management-card-body">
+      <router-outlet></router-outlet>
+    </div>
+</div>
+    

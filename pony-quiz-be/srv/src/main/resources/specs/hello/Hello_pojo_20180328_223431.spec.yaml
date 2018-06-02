@@ -1,0 +1,13 @@
+title: Hello pojo 20180328 223431
+given:
+  - time: 2018-03-28T22:34:31.574+03:00
+wts:
+  - when: |
+       POST mypojo
+       Cookie: RestxSession-MyLittlePony={"principal":"admin","sessionKey":"412a1a91-c0d1-4c22-8dde-def27ebf1107","_expires":"2018-04-27T22:34:31.574+03:00"}; RestxSessionSignature-MyLittlePony=U9iomXFWuLD0YK1LA1qkxQlA8pY=
+
+        "false":"name"
+    then: |
+       400
+
+

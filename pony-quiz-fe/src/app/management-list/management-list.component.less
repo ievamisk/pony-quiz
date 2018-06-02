@@ -1,0 +1,76 @@
+@import '../../assets/colors.less';
+
+
+.management-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+    &-item {
+        position: relative;
+        padding: 20px;
+        border: 2px solid @purple;
+        border-radius: 5px;            
+        width: 32%;
+        box-sizing: border-box;
+        margin-right: 2%;
+        margin-bottom: 2%;
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+        &:hover {
+            box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+
+        &-title {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        &-image {
+            height: 100px;
+            margin: auto;
+            display: block;
+        }         
+    }
+    &-buttons {
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+    }   
+}
+
+.delete-button, .edit-button {
+    text-transform: uppercase;
+    color: @white;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s ease-out;
+    margin: auto;
+}
+
+.edit-button {
+    width: 50%;
+    margin-right: 10px;
+    background-color: @purple;
+    &:hover {
+        background-color: @dark-purple;
+    }
+}
+
+.delete-button {
+    background-color: @gray;
+    width: 50%;
+
+    &:hover {
+        background-color: @dark-gray;
+    }
+}

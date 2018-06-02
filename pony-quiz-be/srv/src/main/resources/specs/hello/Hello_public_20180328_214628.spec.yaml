@@ -1,0 +1,11 @@
+title: Hello public 20180328 214628
+given:
+  - time: 2018-03-28T21:46:28.924+03:00
+wts:
+  - when: |
+       GET hello?who=lopas
+       Cookie: RestxSession-MyLittlePony={"principal":"admin","sessionKey":"056155c5-88f2-43b6-a451-526ffe183d51","_expires":"2018-04-27T21:46:28.924+03:00"}; RestxSessionSignature-MyLittlePony=LloBpxGTa2wb5//BYAdjpBi8cYY=
+    then: |
+        {
+          "message" : "hello lopas, it's 21:46:28"
+        }

@@ -1,0 +1,12 @@
+<div class="finish" *ngIf="pony">
+  <div class="finish-image">
+      <img [src]="(pony.image) ? sanitizedImage(pony.image) : sanitizedImage()">
+  </div>
+  <div class="finish-result">
+      <h1>{{name}}, you are</h1>
+      <p class="finish-result-name">{{pony.name}}</p>
+      <p class="finish-result-description">{{pony.description}}</p>
+      <button class="restart-button" routerLink=''>Restart</button>
+  </div>
+
+</div>

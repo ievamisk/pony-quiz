@@ -1,0 +1,122 @@
+@import '../../assets/colors.less';
+
+.question {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    position: relative;
+    &-image {
+        margin: auto;
+        width: 50%;
+        > img {
+            margin: auto;
+            height: 300px;
+            width: auto;
+            display: block;
+        }
+    }
+
+    &-form {
+        position: relative;
+        width: 50%;
+        margin-left: 20px;
+
+        &-question {
+            color: @purple;
+            // margin: 0;
+            text-transform: uppercase;
+            font-size: 30px;
+        }
+    }
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.previous-button, .next-button {
+    text-transform: uppercase;
+    color: @white;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    width: 50%;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s ease-out;
+}
+
+.previous-button {
+    background-color: @gray;
+    &:hover {
+        background-color: @dark-gray;
+    }
+}
+
+
+.next-button {
+    background-color: @purple;
+    margin-left: 20px;
+    &:hover {
+        background-color: @dark-purple;
+    }
+
+}
+
+.radio-button {
+    &:checked, &:not(:checked) {
+        display: none;
+    }
+
+
+    &:checked + label, &:not(:checked) + label
+    {
+        position: relative;
+        padding-left: 28px;
+        cursor: pointer;
+        line-height: 20px;
+        display: inline-block;
+        color: @gray;
+    }
+
+    //outside circle
+    &:checked + label:before, &:not(:checked) + label:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 18px;
+        height: 18px;
+        border: 1px solid #ddd;
+        border-radius: 100%;
+        background: @white;
+    }
+
+    //inside circle
+    &:checked + label:after, &:not(:checked) + label:after {
+        content: '';
+        width: 12px;
+        height: 12px;
+        background: @purple;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        border-radius: 100%;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
+
+    //when not checked
+    &:not(:checked) + label:after {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+}

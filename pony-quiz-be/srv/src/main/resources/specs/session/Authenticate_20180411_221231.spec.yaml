@@ -1,0 +1,13 @@
+title: Authenticate 20180411 221231
+given:
+  - time: 2018-04-11T22:12:31.491+03:00
+wts:
+  - when: |
+       POST sessions
+       Cookie: RestxSession-MyLittlePony={"principal":"admin","sessionKey":"867af161-7f9f-48f3-9262-18c9fdfdf75d","_expires":"2018-05-11T22:12:31.491+03:00"}; RestxSessionSignature-MyLittlePony=620Sq0MkTKwMU0ucbaeDYZrdffA=
+
+        v
+    then: |
+       400
+
+
