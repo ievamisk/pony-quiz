@@ -19,9 +19,10 @@ This is quiz application which tells you which pony are you :)
 * Run `mongorestore --db mylittlepony mongo_export/dump/mylittlepony` to import initial data
 * Open directory pony-quiz-be
 * Run project using Tomcat:
-  You need to configure Tomcat server first
+  - Configure Tomcat server first:
 ![tomcat_config](https://user-images.githubusercontent.com/17141606/40879024-81098548-66a2-11e8-90c0-aaf233fce745.png)
 ![tomcat_config2](https://user-images.githubusercontent.com/17141606/40879023-80e921b8-66a2-11e8-9227-4e6a4e8e3f85.png)
+  - Press OK and start the server
 
 ## Screenshots
 
