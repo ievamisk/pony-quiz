@@ -1,5 +1,6 @@
 # Ponies Quiz
-This is quiz application which tells you which pony are you :)
+This is quiz application which tells you which pony are you :) It was created by small group of studens and I was developing 
+front-end and connecting it to back-end. Only part of front-end which was created by another student was question form functionality (displaying data from back-end and navigating through questions)
 
 ## About
 * In this application you can:
